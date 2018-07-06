@@ -27,3 +27,4 @@ print("columns : %s"%(header))
 with open(options.csv, 'w') as f:
    f.write("%s\n"%(header))
    np.savetxt(f, data,  fmt="%.3f", delimiter=',')
+f.close()
