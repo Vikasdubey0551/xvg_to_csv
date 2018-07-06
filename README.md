@@ -6,8 +6,6 @@ This scripts converts an XVG (gromacs output file) file to a CSV file. Prerequis
 
 `optional arguments:
 
-     -h, --help  show this help message and exit`    
-     
-     `-xvg XVG    INPUT.xvg` 
-     
+     -h, --help  show this help message and exit       
+     `-xvg XVG    INPUT.xvg    
      `-csv CSV    OUTPUT.csv`
