@@ -17,13 +17,16 @@ with open(options.xvg,'r') as f:
    metadata2=pattern2.findall(f.read())
 
 #Making list without brackets
+header=[metadata1,metadata2]
+header=str(header).translate(string.maketrans('', ''), '[]\'\' \'')
+print("columns : %s"%(header))
+
+#Reading XVG data
 gen = (r for r in open(options.xvg) if not r[0] in ('@', '#'))
 data = np.genfromtxt(gen, delimiter='')
 
 #Writing CSV
-header=[metadata1,metadata2]
-header=str(header).translate(string.maketrans('', ''), '[]\'\' \'')
-print("columns : %s"%(header))
+
 with open(options.csv, 'w') as f:
    f.write("%s\n"%(header))
    np.savetxt(f, data,  fmt="%.3f", delimiter=',')
