@@ -26,7 +26,6 @@ gen = (r for r in open(options.xvg) if not r[0] in ('@', '#'))
 data = np.genfromtxt(gen, delimiter='')
 
 #Writing CSV
-
 with open(options.csv, 'w') as f:
    f.write("%s\n"%(header))
    np.savetxt(f, data,  fmt="%.3f", delimiter=',')
