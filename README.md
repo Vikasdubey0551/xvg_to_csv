@@ -1,4 +1,4 @@
-## prerequisites
+## Prerequisites
 
 This scripts converts a single or multiple **XVG** (gromacs output file) or text files to a joint **CSV** file without distrupting the formating and labels. 
 
